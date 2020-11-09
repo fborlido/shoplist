@@ -20,8 +20,8 @@ function Item({item, items, setItems}) {
     return (
         <tr>
             <td style={item.checked ? {textDecoration: "line-through"} : {}}>{item.item}</td>
-            <td><a onClick={onCheck} href="#">Check</a></td>
-            <td><a onClick={onDelete} href="#">Delete</a></td>
+            <td><a onClick={onCheck}>Check</a></td>
+            <td><a onClick={onDelete}>Delete</a></td>
         </tr>
     )
 }
