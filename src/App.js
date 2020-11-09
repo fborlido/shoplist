@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import React, { useState } from 'react'
 import './App.css';
+import Nav from './components/Nav'
+import Form from './components/Form'
+import Table from './components/Table'
 
 function App() {
+
+  const initItems = [
+    {
+      id: 1,
+      item: 'Carrots',
+      checked: true
+    },
+    {
+      id: 2,
+      item: 'Bananas',
+      checked: false
+    },
+    {
+      id: 3,
+      item: 'Potatoes',
+      checked: false
+    }
+  ]
+
+  const [items, setItems] = useState(initItems)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Nav />
+      <Form />
+      <Table items={items} setItems={setItems} />
     </div>
   );
 }
