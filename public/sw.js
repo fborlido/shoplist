@@ -1,4 +1,4 @@
-var CACHE_NAME = 'otimigas-app';
+var CACHE_NAME = 'fred-shop';
 
 var urlsToCache = [
     '/',
